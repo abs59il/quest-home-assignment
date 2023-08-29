@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { WorkersComponent } from './workers.component';
-import { FlightsComponent } from './components/flights/flights.component';
-import { FlightDetailsComponent } from './components/flight-details/flight-details.component';
 import { workersResolver } from 'src/app/resolvers/workers.resolver';
 import { flightsResolver } from 'src/app/resolvers/flights.resolver';
 import { flightDetailsResolver } from 'src/app/resolvers/flight-details.resolver';
 import { hasFlightSelectedGuard } from 'src/app/guards/has-flight-selected.guard';
+import { FlightsComponent } from './pages/flights/flights.component';
+import { FlightDetailsComponent } from './pages/flight-details/flight-details.component';
 
 const routes: Routes = [
   {
