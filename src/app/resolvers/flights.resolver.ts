@@ -7,10 +7,8 @@ export const flightsResolver: ResolveFn<Flight[]> = (route, state) => {
 
   const svc = inject(WorkersService);
 
-
   const id = Number.parseInt(route.paramMap.get("id") ?? "1");
-  console.log(id);
-  
+
   return svc.getFlights(id);
 
 };

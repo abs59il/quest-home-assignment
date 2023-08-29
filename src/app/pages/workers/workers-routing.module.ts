@@ -11,6 +11,7 @@ import { FlightDetailsComponent } from './pages/flight-details/flight-details.co
 const routes: Routes = [
   {
     path: "", resolve: { workers: workersResolver }, component: WorkersComponent, children: [
+      { path: "", pathMatch: "full", redirectTo: "1" },
       {
         path: ":id",  component: FlightsComponent, 
           resolve: { flights: flightsResolver },
