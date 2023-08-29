@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
-      <p *ngIf="loading"> Loading ... </p>
+      <p class="block" [@transition] *ngIf="loading"> Loading ... </p>
     </div>
     <div class="flex-none">
         <router-outlet></router-outlet>
