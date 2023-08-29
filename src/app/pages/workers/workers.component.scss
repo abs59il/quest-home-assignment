@@ -1,0 +1,9 @@
+app-workers ul>li {
+
+    @apply transition-colors duration-150 text-gray-700 hover:text-indigo-600 hover:bg-gray-50 flex gap-x-3 rounded-md p-2 pl-3 text-sm leading-6 font-semibold;
+
+    &.active {
+        @apply bg-indigo-100 text-indigo-600;
+    }
+
+}

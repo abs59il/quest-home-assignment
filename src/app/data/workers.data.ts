@@ -1,0 +1,1 @@
+export default [{ "id": 1, "name": "John Doe" }, { "id": 2, "name": "Jane Doe" }, { "id": 3, "name": "Mr. Smith" }, { "id": 4, "name": "Patrick Stewart" }];

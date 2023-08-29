@@ -1,0 +1,47 @@
+<div class="w-96">
+
+    <div class="overflow-hidden rounded-lg bg-white shadow">
+      
+
+      <div class="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
+        <h3 class="text-base font-semibold leading-6 text-gray-900">Flight Details</h3>
+      </div>
+
+
+        <div>
+
+                <div class="border-t border-gray-100">
+                  <dl class="divide-y divide-gray-100">
+
+                    <ng-container *ngIf="(details$ | async) as details">
+
+                      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="text-sm font-medium text-gray-900">Plane Number</dt>
+                          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ details.plane }} </dd>
+                        </div>
+                        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="text-sm font-medium text-gray-900">Duration</dt>
+                          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ details.duration | appTime }}</dd>
+                        </div>
+                        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="text-sm font-medium text-gray-900">Origin Gate</dt>
+                          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ details.from_gate }} </dd>
+                        </div>
+                        <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="text-sm font-medium text-gray-900">Destination Gate</dt>
+                          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"> {{ details.to_gate }} </dd>
+                        </div>
+
+                    </ng-container>
+
+                    
+                  </dl>
+        
+              </div>
+
+            <!-- <pre> {{ details$ | async | json }} </pre> -->
+        </div>
+      </div>
+
+
+</div>

@@ -1,0 +1,32 @@
+<div class="w-full h-full flex flex-col md:flex-row gap-x-4 p-8">
+    
+    <div class="flex-none w-64">
+
+        <div class="overflow-hidden rounded-lg bg-white shadow">
+
+            <div class="border-b border-gray-200 bg-white px-4 py-5 sm:px-6">
+                <h3 class="text-base font-semibold leading-6 text-gray-900">Workers</h3>
+              </div>
+
+            <div class="px-4 py-5 sm:p-6">
+
+                <ul role="list" class="-mx-2 space-y-1">
+                    <li class="group" [routerLink]="[worker.id]" 
+                        [routerLinkActive]="'active'"
+                        *ngFor="let worker of workers$ | async" > {{ worker.name }} </li>
+                </ul>
+            
+            </div>
+          </div>
+    
+
+
+    </div>
+    
+    <div class="flex-1">
+        
+        <router-outlet></router-outlet>
+
+    </div>
+
+</div>
